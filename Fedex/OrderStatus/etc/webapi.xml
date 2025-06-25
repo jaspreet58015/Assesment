@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <!-- Define POST route to update order status -->
+    <route url="/V1/fedex/order/status/update" method="POST">
+        <service class="Fedex\OrderStatus\Api\OrderStatusManagementInterface" method="updateStatus"/>
+
+        <!-- Authorization: use custom ACL or fallback to default sales permission -->
+        <resources>
+            <resource ref="Magento_Authorization::authenticated"/>
+        </resources>
+
+        <!-- Optional: Declare input and output types explicitly -->
+        <data>
+            <parameter name="incrementId" force="true">%string</parameter>
+            <parameter name="newStatus" force="true">%string</parameter>
+        </data>
+    </route>
+</routes>

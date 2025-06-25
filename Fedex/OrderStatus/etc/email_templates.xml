@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="fedex_order_shipped_email_template" label="FedEx Order Shipped Notification"
+              file="order_shipped.html" type="html" module="Fedex_OrderStatus" area="frontend"/>
+</config>
