@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+
+    <!-- Order Status menu item under Sales -->
+    <menu>
+        <add id="Fedex_OrderStatus::order_status"
+             title="Order Status"
+             module="Fedex_OrderStatus"
+             sortOrder="70"
+             parent="Magento_Sales::sales"
+             action="fedex_orderstatus/status/index"
+             resource="Fedex_OrderStatus::order_status"/>
+    </menu>
+</config>
